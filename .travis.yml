@@ -11,7 +11,8 @@ android:
     - android-22
 
 script:
-  - ./gradlew bintrayUpload --info
+  - cd cloudboost-android-sdk 
+  - ../gradlew bintrayUpload --info
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
