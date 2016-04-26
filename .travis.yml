@@ -11,6 +11,7 @@ android:
     - android-22
 
 script:
+  -- chmod +x gradlew
   - ./gradlew bintrayUpload --info
 
 before_cache:
