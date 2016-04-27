@@ -16,7 +16,6 @@ script:
 after_success:
   - cd ..
   - pwd
-  - set -o errexit -o nounset
   - git config user.name "egimaben"
   - git config user.email "egimaben@gmail.com"
   - git config user.password "soulsurvivor1"
