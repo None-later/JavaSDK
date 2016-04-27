@@ -15,13 +15,7 @@ script:
   
 after_success:
   - cd ..
-  - pwd
-  - git config user.name "egimaben"
-  - git config user.email "egimaben@gmail.com"
-  - git config user.password "soulsurvivor1"
-  - git add .
-  - git commit -m "travis commit"
-  - git push origin master
+  - bash deploy.sh
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
