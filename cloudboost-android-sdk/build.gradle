@@ -52,6 +52,8 @@ dependencies{
 	compile files('./libs/google-play-services.jar')
 	compile files('./libs/socket-client.jar')
 	testCompile files('./libs/junit-4.3.jar')
+	testCompile files('./libs/json-20160212.jar')
+	
 
 }
 android {
