@@ -427,19 +427,19 @@ public class TestCache {
 		});
 	}
 
-	@Test(timeout = 30000)
-	public void shouldErrWhenDeletingWrongCache() throws CloudException {
-		initialize();
-		CloudCache cache = new CloudCache("wrongCache");
-		cache.delete(new ObjectCallback() {
+//	@Test(timeout = 30000)
+	//public void shouldErrWhenDeletingWrongCache() throws CloudException {
+		//initialize();
+		//CloudCache cache = new CloudCache("wrongCache");
+		//cache.delete(new ObjectCallback() {
 
-			@Override
-			public void done(Object x, CloudException t) throws CloudException {
-				Assert.assertTrue(t != null);
+			//@Override
+			//public void done(Object x, CloudException t) throws CloudException {
+				//Assert.assertTrue(t != null);
 
-			}
-		});
-	}
+			//}
+		//});
+	//}
 
 //	@Test(timeout = 30000)
 //	public void shouldErrWhenClearingWrongCache() throws CloudException {
