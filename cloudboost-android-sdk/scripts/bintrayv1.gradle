@@ -23,9 +23,6 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
 }
-task bintrayUpload(dependsOn: test) {
-
-}
 artifacts {
     archives javadocJar
     archives sourcesJar

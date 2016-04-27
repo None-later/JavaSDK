@@ -1,6 +1,6 @@
 branches:
   only:
-    - master
+    - development
 
 language: android
 sudo: false
@@ -12,7 +12,10 @@ android:
 
 script:
   - cd cloudboost-android-sdk 
-  - ../gradlew bintrayUpload --info
+  
+after_success:
+  - cd ..
+  - bash deploy.sh
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
