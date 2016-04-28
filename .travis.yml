@@ -11,8 +11,8 @@ android:
     - android-22
 
 script:
-  - chmod u+x .travis/deploy.sh
   - cd cloudboost-android-sdk 
+  - chmod u+x .travis/deploy.sh
   
 deploy:
   provider: script
