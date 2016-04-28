@@ -14,10 +14,10 @@ script:
   - cd cloudboost-android-sdk 
   
 after_success:
-  - cd ..
-  - echo "where am i"
-  - pwd
-  - bash deploy.sh
+  - cd .. --info
+  - echo "where am i" --info
+  - pwd --info
+  - bash deploy.sh --info
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
