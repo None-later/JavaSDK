@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 rev=$(git rev-parse --short HEAD)
 git config user.name "egimaben"
 git config user.email "egimaben@gmail.com"
