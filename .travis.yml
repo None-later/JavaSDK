@@ -12,14 +12,13 @@ android:
 
 script:
   - cd cloudboost-android-sdk 
-  
+deploy:
+  provider: script
+  script: deploy.sh
+  on:
+    branch: master
 after_success:
   - cd ..
-  - eval "$(ssh-agent -s)" #start the ssh agent
-  - chmod 600 .travis/deploy_key.pem # this key should have push access
-  - ssh-add .travis/deploy_key.pem
-  - git remote add deploy DEPLOY_REPO_URI_GOES_HERE
-  - git push deploy
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
