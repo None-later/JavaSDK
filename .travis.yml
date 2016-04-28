@@ -16,7 +16,7 @@ deploy:
   provider: script
   script: deploy.sh
   on:
-    branch: master
+    branch: development
 after_success:
   - cd ..
 
