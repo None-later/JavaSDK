@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+echo "checking git status"
+git status
+echo "finished checking status"
 rev=$(git rev-parse --short HEAD)
 git config user.name "egimaben"
 git config user.email "egimaben@gmail.com"
