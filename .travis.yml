@@ -14,14 +14,13 @@ script:
    - pwd
  # - cd cloudboost-android-sdk 
   #- chmod u+x .travis/deploy.sh
-  
+before_deploy:
+   - cd $TRAVIS_BUILD_DIR
 deploy:
   provider: script
   script: deploy.sh
   on:
     branch: development
-after_success:
-  - cd ..
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
