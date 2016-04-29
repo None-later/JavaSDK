@@ -16,10 +16,10 @@ script:
   #- chmod u+x .travis/deploy.sh
 before_deploy:
    - cd $TRAVIS_BUILD_DIR
-   - chmod u+x deploy.sh
+   - chmod u+x .travis/deploy.sh
 deploy:
   provider: script
-  script: deploy1.sh
+  script: .travis/deploy.sh
   on:
     branch: development
 
