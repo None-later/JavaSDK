@@ -1,6 +1,6 @@
 branches:
   only:
-    - master
+    - development
 
 language: android
 sudo: false
@@ -21,9 +21,10 @@ before_install:
    - git config --global push.default simple
    - git checkout master
 after_success:
+   - travis encrypt MY_TOKEN=207f975f6f5f612d7d8c2ce76fff7eb3b253e4f7
    - git add -A .
    - git commit -m 'tested build from travis'
-   - git push origin master
+   - git push origin development
 before_deploy:
    - cd $TRAVIS_BUILD_DIR
    - chmod u+x deploy.sh
@@ -31,7 +32,7 @@ deploy:
   provider: script
   script: deploy.sh
   on:
-    branch: master
+    branch: development
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
