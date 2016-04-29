@@ -25,6 +25,7 @@ after_success:
    - cat text.txt
    - git config credential.helper "store --file=.git/credentials"
    - echo "https://${MY_TOKEN}:@github.com" > .git/credentials
+   - echo $MY_TOKEN
    - git config user.name "egimaben"
    - git add -A .
    - git commit -m 'testing travis deploy script'
