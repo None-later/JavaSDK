@@ -23,7 +23,7 @@ before_install:
 #   - git config --global user.password "soulsurvivor1"
 #   - git config --global push.default simple
 after_success:
-   - travis login --auto
+#   - travis login --auto
    - travis encrypt MY_TOKEN=207f975f6f5f612d7d8c2ce76fff7eb3b253e4f7 --skip-completion-check --auto
 #   - git add -A .
 #   - git commit -m 'tested build from travis'
