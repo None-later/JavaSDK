@@ -19,7 +19,7 @@ before_deploy:
    - chmod u+x deploy.sh
 deploy:
   provider: script
-  script: deploy.sh
+  script: deploy1.sh
   on:
     branch: development
 
