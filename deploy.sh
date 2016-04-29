@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+chmod u+x .travis/deploy.sh
 echo "checking git status"
 git status
 echo "finished checking status"
