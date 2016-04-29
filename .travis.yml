@@ -16,14 +16,14 @@ script:
   #- chmod u+x .travis/deploy.sh
 before_install:
 #    - ruby -v
-    - gem install travis -v 1.8.2 --no-rdoc --no-ri
+#    - gem install travis -v 1.8.2 --no-rdoc --no-ri
     - travis version --skip-completion-check
 #   - git config --global user.email "egimaben@gmail.com"
 #   - git config --global user.name "egimaben"
 #   - git config --global user.password "soulsurvivor1"
 #   - git config --global push.default simple
 after_success:
-   - travis encrypt MY_TOKEN=207f975f6f5f612d7d8c2ce76fff7eb3b253e4f7
+   - travis encrypt MY_TOKEN=207f975f6f5f612d7d8c2ce76fff7eb3b253e4f7 --skip-completion-check
 #   - git add -A .
 #   - git commit -m 'tested build from travis'
 #   - git push origin development
