@@ -15,8 +15,8 @@ script:
  # - cd cloudboost-android-sdk 
   #- chmod u+x .travis/deploy.sh
 before_install:
-    - ruby -v
-#    - gem install travis -v 1.8.2 --no-rdoc --no-ri
+#    - ruby -v
+    - gem install travis
     - travis version
 #   - git config --global user.email "egimaben@gmail.com"
 #   - git config --global user.name "egimaben"
