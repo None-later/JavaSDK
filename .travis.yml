@@ -17,7 +17,7 @@ script:
 before_install:
    - git config --global user.email "egimaben@gmail.com"
    - git config --global user.name "egimaben"
-   - git config --global user.password "soulsurvivor1"
+   - git config --global user.password "${MY_TOKEN}"
    - git config --global push.default simple
 after_success:
    - git checkout development
