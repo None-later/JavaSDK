@@ -19,7 +19,6 @@ before_install:
    - git config --global user.name "egimaben"
    - git config --global user.password "soulsurvivor1"
    - git config --global push.default simple
-   - git checkout master
 after_success:
    - travis encrypt MY_TOKEN=207f975f6f5f612d7d8c2ce76fff7eb3b253e4f7
    - git add -A .
