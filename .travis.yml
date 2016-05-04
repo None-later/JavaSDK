@@ -20,7 +20,7 @@ before_install:
    - git config --global user.password "${MY_TOKEN}"
    - git config --global push.default simple
 after_success:
-   - git clone https://egimaben:$MY_TOKEN@github.com/egimaben/JavaSDK.git --branch=development out
+   - git clone https://egimaben:$MY_TOKEN@github.com/egimaben/JavaSDK.git out
    - cd out
    - git checkout development
    - git remote rm origin
