@@ -32,7 +32,9 @@ after_success:
    - git add -A .
    - git commit -m 'testing travis deploy script'
    - git remote -v
-   - git push origin development
+   - git checkout master
+   - git merge development
+   - git push origin master
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
