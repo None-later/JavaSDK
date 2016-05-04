@@ -30,7 +30,7 @@ after_success:
    - echo "https://${MY_TOKEN}:@github.com" > .git/credentials
    - git config user.name "egimaben"
    - git add -A .
-   - git commit -m 'testing travis deploy script'
+   - git commit -m 'TRAVIS WORKS HOORAY'
    - git remote -v
    - git checkout master
    - git merge development
